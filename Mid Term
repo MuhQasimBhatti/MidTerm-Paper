@@ -1,0 +1,111 @@
+// Mid term Paper Questionz.cpp : This file contains the 'main' function. Program execution begins and ends there. Muh Qasim
+//
+
+#include <iostream>
+using namespace std;
+int main() {
+	int q;
+	cout << "Enter Question Number" << endl;
+	cin >> q;
+	switch (q) {
+	case 1:
+	{
+		cout << "i:"<<endl;
+		int b = 6, c = 5;
+		if (b++ == 7 && ++c == 5)
+		{
+			b *= c;
+			cout << ++b << endl;
+		}
+		else
+			cout << b-- << endl;
+		cout << b << endl<<endl;
+		
+		cout << "ii:" << endl;
+		int n = 5, a = 4, B = 0, C = 8;
+		if (B <= 6 && C > 4 || C <= 9)
+			n++;
+		cout << n;
+		if (B != 4 && B > 5 || C <= 9)
+			n += a++;
+		cout << n<<endl;
+	}
+	break;
+	case 2:
+	{
+		int x;
+		int y;
+		int c = 0;
+		cout << "Enter a number" << endl;
+		cin >> x;
+		y = x;
+		while (y > 0)
+		{
+			y = y / 10;
+			c++;
+		}
+		switch (c) {
+		case 1:
+			cout << "This is one digit number" << endl;
+			break;
+		case 2:
+			cout << "This is 2 digit number" << endl;
+			break;
+		case 3:
+			cout << "This is 3 digit number" << endl;
+			break;
+		case 4:
+			cout << "This is 4 digit number" << endl;
+			break;
+		default:
+			cout << "This is greater than 4" << endl;
+		}
+
+	}
+	break;
+	case 3:
+	{
+		int arr[10];
+		int p;
+		int sum = 0;
+		cout << "Enter 10 numbers" << endl;
+		for (int x = 0; x < 10; x++)
+			cin >> arr[x];
+
+		for (int x = 0; x < 9; x++)
+			for (int y = x + 1; y < 10; y++)
+				if (arr[x] < arr[y])
+				{
+					int z = arr[x];
+					arr[x] = arr[y];
+					arr[y] = z;
+				}
+
+		for (int x = 0; x < 10; x++)
+			sum = sum + arr[x];
+		do {
+			cout << "Enter\n" <<
+				"1 for Largest number\n" <<
+				"2 for 2nd largest number\n" <<
+				"3 for Sum of the array\n" <<
+				"4 Quit" << endl;
+			cin >> p;
+
+			switch (p)
+			{
+			case 1:
+				cout << arr[0]<<endl;
+				break;
+			case 2:
+				cout << arr[1]<<endl;
+				break;
+			case 3:
+				cout << sum<<endl;
+				break;
+			}
+			cout << endl << endl;
+		} while (p != 4);	
+	}
+	}
+	cout << "Thankyou!";
+}
